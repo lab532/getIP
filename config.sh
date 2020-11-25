@@ -13,7 +13,7 @@ sudo chmod 666 $1
 
 sed -i "5c echo \$ip \$(date) > \$repo_dir/$1" $repo_dir/update.sh
 sed -i "6c git add ./$1" $repo_dir/update.sh
-sed -i "7c git commit -m \"from $1\"" $repo_dir/update.sh
+sed -i "8c git commit -m \"from $1\"" $repo_dir/update.sh
 
 
 cd $repo_dir/.git
