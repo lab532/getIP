@@ -19,8 +19,8 @@ sed -i "8c git commit -m \"from $1\"" $repo_dir/update.sh
 cd $repo_dir/.git
 sudo chmod 777 -R *
 
-sudo sed -i "\$a $3 * * * * '\$user' cd '\$repo_dir' && /bin/sh update.sh" /etc/crontab
-sudo sed -i "\$a $($3+30) * * * * '\$user' cd '\$repo_dir' && /bin/sh update.sh" /etc/crontab
+sudo sed -i "\$a $3 * * * * '\$user' cd '\$repo_dir' && /bin/sh update.sh $3" /etc/crontab
+sudo sed -i "\$a $($3+30) * * * * '\$user' cd '\$repo_dir' && /bin/sh update.sh $3" /etc/crontab
 sudo service cron start
 sudo service cron reload
 
