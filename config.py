@@ -1,4 +1,5 @@
 import os
+import sys
 if os.path.isfile(os.path.expandvars('$HOME')+'/.gitconfig'):
     pass
 else:
